@@ -27,8 +27,8 @@ public class ProductOrderedController {
     }
 
     @PostMapping("/getAllForAdmin")
-    public List<ProductOrdered> getAllForAdmin(){
-        return productOrderedService.getAllForAdmin();
+    public List<ProductOrdered> getAllForAdmin(@RequestParam("status") String status){
+        return productOrderedService.getAllForAdmin(status);
     }
 
     @PostMapping("/setToDispatched")

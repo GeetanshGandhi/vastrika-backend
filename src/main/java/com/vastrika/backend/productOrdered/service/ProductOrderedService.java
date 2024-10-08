@@ -50,8 +50,8 @@ public class ProductOrderedService {
         return "Success";
     }
 
-    public List<ProductOrdered> getAllForAdmin(){
-        return productOrderedRepository.findAllForAdmin();
+    public List<ProductOrdered> getAllForAdmin(String status){
+        return productOrderedRepository.findByStatus(status);
     }
 
     public String cancelOrder(int orderId, int productId, String reason){
