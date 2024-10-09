@@ -1,18 +1,22 @@
 package com.vastrika.backend.orders.model;
 
-import com.vastrika.backend.business.model.Business;
-import com.vastrika.backend.customer.model.Customer;
-import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-import java.time.LocalDateTime;
+
+import com.vastrika.backend.customer.model.Customer;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Orders {
 
     @Id
     private int orderId;
-
     private double grandTotal;
     private int subTotal;
     private double tax;
