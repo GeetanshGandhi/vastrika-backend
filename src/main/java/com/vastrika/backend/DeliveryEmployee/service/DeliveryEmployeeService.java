@@ -23,6 +23,10 @@ public class DeliveryEmployeeService {
         return deliveryEmployeeRepository.findAll();
     }
 
+   public List<DeliveryEmployee> getDeliveryEmployeeByCity(String city){
+        return deliveryEmployeeRepository.getDeliveryEmployeeByCity(city);
+    }
+
     public DeliveryEmployee getDeliveryEmployeeById(String mailID) {
         Optional<DeliveryEmployee> employee = deliveryEmployeeRepository.findById(mailID);
         return employee.orElse(null);
