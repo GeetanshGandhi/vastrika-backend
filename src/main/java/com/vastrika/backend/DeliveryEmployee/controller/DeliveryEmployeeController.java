@@ -35,6 +35,11 @@ public class DeliveryEmployeeController {
         return deliveryEmployeeService.getAllDeliveryEmployees();
     }
 
+    @GetMapping("/getByCity")
+    public List<DeliveryEmployee> getDeliveryEmployeeByCity(@RequestParam("city") String city){
+        return deliveryEmployeeService.getDeliveryEmployeeByCity(city);
+    }
+
     @GetMapping("/getByID")
     public DeliveryEmployee getDeliveryEmployeeById(@RequestParam("mailID") String id){
         return deliveryEmployeeService.getDeliveryEmployeeById(id);
