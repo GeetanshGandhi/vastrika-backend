@@ -9,6 +9,8 @@ public class DeliveryEmployee {
     private String employeeEmail;
     private String EmployeeName;
     private String password;
+     private String city;
+     private String phoneNumber;
     
 
     public DeliveryEmployee(){}
@@ -34,5 +36,21 @@ public class DeliveryEmployee {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+     public void setphoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getphoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+     
+    public String getCity() {
+        return city;
     }
 }
